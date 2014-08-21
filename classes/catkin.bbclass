@@ -8,12 +8,10 @@ DEPENDS_prepend = "${@['catkin-native ', ''][d.getVar('BPN', True) == 'catkin']}
 
 EXTRA_OECMAKE_CATKIN = "\
     -DCMAKE_PREFIX_PATH='${STAGING_DIR_HOST}${ros_prefix};${STAGING_DIR_HOST}${prefix};${STAGING_DIR_NATIVE}${ros_prefix};${STAGING_DIR_NATIVE}${prefix}' \
-    -DCMAKE_INSTALL_PREFIX:PATH='${ros_prefix}' \
     "
 
 EXTRA_OECMAKE_CATKIN_class-native = "\
     -DCMAKE_PREFIX_PATH='${ros_prefix}' \
-    -DCMAKE_INSTALL_PREFIX:PATH='${ros_prefix}' \
     -DRT_LIBRARY=${libdir_native} \
     "
 

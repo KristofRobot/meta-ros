@@ -79,3 +79,7 @@ ros_sysroot_preprocess () {
         sysroot_stage_dir ${D}${ros_stacksdir} ${SYSROOT_DESTDIR}${ros_stacksdir}
     fi
 }
+
+EXTRA_OECMAKE_prepend = "\
+    -DCMAKE_INSTALL_PREFIX:PATH='${ros_prefix}' \
+    "
